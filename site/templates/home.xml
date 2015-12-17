@@ -35,8 +35,19 @@
 							/>
 					</svg>
 				</a>
-
 			</header>
+
+			<section id="about">
+				<h2><cms:text constant="title_about"/></h2>
+
+				<img 
+					src="_BASEURL.'/site/images/car-logos.jpg'"  
+					alt="car_logo"
+					cms:eval="src"
+					/>
+
+				<p><cms:text constant="subtitle_about"/></p>	
+			</section>
 		</body>
 	</html>
 </document>
