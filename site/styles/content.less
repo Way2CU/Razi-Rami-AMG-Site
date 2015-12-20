@@ -94,10 +94,26 @@ section#gallery h2:before {
 	background-color: @color_ac_text;
 }
 
-section#gallery img {
+section#gallery a {
+	display: inline-block;
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-bottom: 10px;
+	transition: all 0.3s;
+	overflow: hidden;
+	position: relative;
+}
+
+section#gallery a:hover img {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+section#gallery img {
+	transition: all 0.3s;
 }
 
 section#features ul {
@@ -147,32 +163,34 @@ section#engine div.gear {
 section#engine div.replacement h4,
 section#engine div.diagnostic2 h4,
 section#engine div.gear h4 {
+	margin-bottom: 10px;
 	text-align: center;
 	width: 80%;
 }
 
 section#engine div.diagnostic2 {
-	top: 260px;
+	top: 270px;
 }
 
 section#engine div.replacement {
-	top: 450px;
+	top: 460px;
 }
 
 section#engine div.diagnostic1,
 section#engine div.updates {
 	left: calc(~'(50% - 600px)');
-	top: 100px;
+	top: 110px;
 }
 
 section#engine div.diagnostic1 h4,
 section#engine div.updates h4 {
+	margin-bottom: 10px;
 	margin-right: auto;
 	width: 80%;
 }
 
 section#engine div.updates {
-	top: 450px;
+	top: 460px;
 }
 
 section#engine  img {
@@ -232,8 +250,10 @@ div#form_wrap form label:nth-of-type(2):before {
 }
 
 div#form_wrap form label:last-of-type:before {
-	background-position: -2px 0px;
+	background-position: 4px 0px;
 	right: 88px;
+	width: 50px;
+	height: 50px;
 }
 
 div#form_wrap form label span {
@@ -252,6 +272,11 @@ div#form_wrap form label input {
 	border: 1px solid @color_ac_text;
 	transition: all 0.3s;
 	width:  calc(~'(230px - 40px)');
+}
+
+div#form_wrap form label:last-of-type input {
+	padding-right: 50px;
+	width:  calc(~'(230px - 50px)');
 }
 
 div#form_wrap form label input:focus,
