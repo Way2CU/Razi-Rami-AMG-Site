@@ -73,6 +73,10 @@
 						template="parts/engine_details.xml"
 						/>
 			</section>
+			
+			<section id="paint">
+				<h2><cms:text constant="title_paint"/></h2>
+			</section>
 		</body>
 	</html>
 </document>

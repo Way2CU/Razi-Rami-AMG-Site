@@ -6,12 +6,21 @@
  * Authors:Tal Reznic
  */
 
+section#paint,
 section#engine,
 section#features,
 section#about {
 	display: block;
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
+}
+
+section#paint {
+	background-image: url(../images/paint-job.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1920px 700px;
+	min-height: 600px;
 }
 
 section#engine {
@@ -23,8 +32,16 @@ section#engine {
 	position: relative;
 }
 
+section#paint,
 section#features {
 	color: @color_ac_dark_blue;
+}
+
+section#paint h2 {
+	font-weight: 400;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
 }
 
 section#about h2 {
