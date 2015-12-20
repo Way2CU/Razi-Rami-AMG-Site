@@ -64,6 +64,15 @@
 					</cms:module>
 				</ul>	
 			</section>
+
+			<section id="engine">
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="engine"
+						template="parts/engine_details.xml"
+						/>
+			</section>
 		</body>
 	</html>
 </document>

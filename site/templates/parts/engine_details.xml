@@ -1,0 +1,10 @@
+<document>
+	<div class="$params['text_id']" cms:eval="class">
+		<h4><cms:var param="title" multilanguage="yes"/></h4>
+		<img 
+			src="_BASEURL.'/site/images/engine-line.svg'"  
+			alt="engine-line"
+			cms:eval="src"
+			/>
+	</div>
+</document>

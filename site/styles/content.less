@@ -6,11 +6,21 @@
  * Authors:Tal Reznic
  */
 
+section#engine,
 section#features,
 section#about {
 	display: block;
 	text-align: center;
 	padding: 50px calc(~'(100% - 1200px) / 2');
+}
+
+section#engine {
+	background-image: url(../images/engine.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1920px 750px;
+	min-height: 650px;
+	position: relative;
 }
 
 section#features {
@@ -77,4 +87,60 @@ section#about p {
 	margin-right: auto;
 	color: @color_ac_dark_blue;
 	width: 600px;
+}
+
+
+section#engine div {
+	position: absolute;
+}
+
+section#engine div.replacement,
+section#engine div.diagnostic2,
+section#engine div.gear {
+	right: calc(~'(50% - 600px)');
+	top: 100px;
+}
+
+section#engine div.replacement h4,
+section#engine div.diagnostic2 h4,
+section#engine div.gear h4 {
+	text-align: center;
+	width: 80%;
+}
+
+section#engine div.diagnostic2 {
+	top: 260px;
+}
+
+section#engine div.replacement {
+	top: 450px;
+}
+
+section#engine div.diagnostic1,
+section#engine div.updates {
+	left: calc(~'(50% - 600px)');
+	top: 100px;
+}
+
+section#engine div.diagnostic1 h4,
+section#engine div.updates h4 {
+	margin-right: auto;
+	width: 80%;
+}
+
+section#engine div.updates {
+	top: 450px;
+}
+
+section#engine  img {
+	width: 100%;
+}
+
+section#engine div.diagnostic1 img,
+section#engine div.updates img {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+    	-ms-transform: rotateY(180deg);
+     	-o-transform: rotateY(180deg);
+        	transform: rotateY(180deg);
 }
