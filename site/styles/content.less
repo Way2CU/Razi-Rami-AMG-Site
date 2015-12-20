@@ -6,7 +6,6 @@
  * Authors:Tal Reznic
  */
 
-
 section#paint,
 section#engine,
 section#features,
@@ -281,4 +280,31 @@ div#form_wrap form div.controls button {
 
 div#form_wrap form div.controls button:hover {
 	background-color: @color_ac_dark_blue;
+}
+
+/*Tablet version*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+section#gallery h2:before, 
+section#features h2:before {
+	width: 900px;
+	margin-left: -450px;
+}
+
+section#engine div.replacement, 
+section#engine div.diagnostic2,
+section#engine div.gear {
+ 	right: 0px;
+}
+
+section#engine div.diagnostic1, 
+section#engine div.updates {
+	left: 0px;
+}
+
+div#form_wrap form label input {
+	width:  calc(~'(200px - 40px)');
+}
+
 }
