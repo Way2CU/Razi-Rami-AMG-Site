@@ -6,6 +6,7 @@
  * Authors:Tal Reznic
  */
 
+section#contact,
 header {
 	display: block;
 	text-align: center;
@@ -18,29 +19,41 @@ header {
 	min-height: 750px;
 }
 
+section#contact {
+	background-image: url(../images/footer.jpg);
+	padding-top: 150px;
+	min-height: 650px;
+	position: relative;
+}
+
+section#contact img,
 header img {
 	width: 15%;
 }
 
+section#contact h2,
 header h1 {
 	font-weight: 400;
 }
 
+section#contact h2 strong,
 header h1 strong {
 	display: block;
 }
 
+section#contact address,
 header address {
 	font-style: normal;
 	margin-bottom: 0.67em;
 }
 
+section#contact a.phone,
 header a.phone {
 	display: inline-block;
 	vertical-align: middle;
 	text-decoration: none;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	padding-top: 0.4em;
+	padding-bottom: 0.3em;
 	padding-left: 35px;
 	padding-right: 35px;
 	color: @color_ac_text;
@@ -52,16 +65,34 @@ header a.phone {
 	transition: all 0.3s;
 }
 
+section#contact a.phone {
+	background-color: transparent;
+	border: 1px solid @color_ac_text;
+}
+
 header a.phone:hover {
 	background-color: @color_ac_dark_blue;
 	border: 1px solid @color_ac_light_blue;
 }
 
+section#contact a.phone:hover {
+	background-color: @color_ac_text;
+	color: @color_ac_light_blue;
+}
+
+section#contact a.phone:hover svg {
+	fill: @color_ac_light_blue;
+}
+
+section#contact a.phone svg,
 header a.phone svg {
 	display: inline-block;
 	vertical-align: middle;
 	padding-right: 5px;
+	padding-top: 0.2em;
+	padding-bottom: 0.3em;
 	width: 35px;
 	height: 35px;
 	fill: @color_ac_text;
+	transition: all 0.3s;
 }
