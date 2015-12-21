@@ -1,5 +1,5 @@
 /**
- * Main Style Sheet
+ * Main Mobile Style Sheet
  * R.R.AMG-Site
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
@@ -12,32 +12,35 @@ section#features,
 section#about {
 	display: block;
 	text-align: center;
-	padding: 50px calc(~'(100% - 1200px) / 2');
 }
 
 section#gallery {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	margin-top: -70px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background-color: @color_ac_black;
 	text-align: center;
 	position: relative;
-	z-index: 0;
+	z-index: -1;
 }
 
 section#paint {
-	background-image: url(../images/paint-job.jpg);
+	background-image: url(../images/mobile-car-paint.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 1920px 700px;
-	min-height: 600px;
+	background-position: center bottom;
+	background-size: 100% auto;
+	min-height: 400px;
 }
 
 section#engine {
-	background-image: url(../images/engine.jpg);
+	margin-top: -1px;
+	padding-top: 25px;
+	background-color: #2E3D50;
+	background-image: url(../images/mobile-some-features-part-2.jpg),url(../images/mobile-some-features-part-1.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 1920px 750px;
-	min-height: 650px;
+	background-position: center top, center bottom;
+	background-size: 100% auto, 100% auto;
+	min-height: 600px;
 	position: relative;
 }
 
@@ -48,26 +51,32 @@ section#features {
 
 section#paint h2 {
 	font-weight: 400;
+	font-size: 1.5em;
 	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+	width: 95%;
 }
 
 section#about h2 {
 	color: @color_ac_black;
 	font-weight: 400;
+	font-size: 1.5em;
 }
 
 section#gallery h2,
 section#features h2 {
-	display: inline-block;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 7px;
 	padding-bottom: 7px; 
 	padding-left: 14px;
 	padding-right: 14px;
 	background-color: @color_ac_text;
 	border: 1px solid @color_ac_dark_blue;
+	font-size: 1.5em;
 	position: relative;
+	width: 280px;
 }
 
 section#gallery h2 {
@@ -80,21 +89,33 @@ section#features h2:before {
 	content: "";
 	position: absolute;
 	top: 50%;
-	margin-left: -600px;
 	margin-top: -0.5px;
-	left: 50%;
-	width: 1200px;
+	left: 0%;
+	width: 100%;
 	height: 1px;
 	background-color: @color_ac_dark_blue;
 	z-index: -1;
-
 }
 
+section#gallery h2:after,
+section#features h2:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	margin-top: -0.5px;
+	right: 0%;
+	width: 100%;
+	height: 1px;
+	background-color: @color_ac_dark_blue;
+	z-index: -1;
+}
+
+section#gallery h2:after,
 section#gallery h2:before {
 	background-color: @color_ac_text;
 }
 
-section#gallery a {
+section#gallery img{
 	display: inline-block;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -102,18 +123,6 @@ section#gallery a {
 	transition: all 0.3s;
 	overflow: hidden;
 	position: relative;
-}
-
-section#gallery a:hover img {
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
-}
-
-section#gallery img {
-	transition: all 0.3s;
 }
 
 section#features ul {
@@ -124,14 +133,13 @@ section#features ul {
 }
 
 section#features ul li {
-	display: inline-block;
+	display: block;
 	vertical-align: top;
-	width: 25%;
 }
 
 section#features ul li svg {
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	fill: @color_ac_dark_blue;
 }
 
@@ -141,81 +149,38 @@ section#features ul li h4 {
 	font-weight: 400;
 }
 
+section#about img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+}
+
 section#about p {
 	margin-left: auto;
 	margin-right: auto;
 	color: @color_ac_dark_blue;
-	width: 600px;
 }
 
-
-section#engine div {
-	position: absolute;
-}
-
-section#engine div.replacement,
-section#engine div.diagnostic2,
-section#engine div.gear {
-	right: calc(~'(50% - 600px)');
-	top: 100px;
-}
-
-section#engine div.replacement h4,
-section#engine div.diagnostic2 h4,
-section#engine div.gear h4 {
-	margin-bottom: 10px;
-	text-align: center;
-	width: 80%;
-}
-
-section#engine div.diagnostic2 {
-	top: 270px;
-}
-
-section#engine div.replacement {
-	top: 460px;
-}
-
-section#engine div.diagnostic1,
-section#engine div.updates {
-	left: calc(~'(50% - 600px)');
-	top: 110px;
-}
-
-section#engine div.diagnostic1 h4,
-section#engine div.updates h4 {
-	margin-bottom: 10px;
-	margin-right: auto;
-	width: 80%;
-}
-
-section#engine div.updates {
-	top: 460px;
-}
-
-section#engine  img {
-	width: 100%;
-}
-
-section#engine div.diagnostic1 img,
-section#engine div.updates img {
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-    	-ms-transform: rotateY(180deg);
-     	-o-transform: rotateY(180deg);
-        	transform: rotateY(180deg);
+section#paint,
+section#features {
+	color: @color_ac_dark_blue;
 }
 
 /*contact form*/
 
 div#form_wrap {
-	position: absolute;
-	bottom: 20px;
-	width: 100%;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: @color_ac_black;
 }
 
 div#form_wrap p {
-	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	font-size: 1.5em;
 }
 
 div#form_wrap form {
@@ -223,8 +188,11 @@ div#form_wrap form {
 }
 
 div#form_wrap form label {
-	display: inline-block;
-	vertical-align: top;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 95%;
 	position: relative;
 }
 
@@ -233,9 +201,9 @@ div#form_wrap form label:nth-of-type(2):before,
 div#form_wrap form label:first-of-type:before {
 	content: "";
 	position: absolute;
-	top: 50%;
+	top: 45px;
 	margin-top: -20px;
-	right: 40px;
+	right: 0px;
 	background-image: url(../images/form-icons.svg);
 	background-repeat: no-repeat;
 	background-position: -82px 0px;
@@ -246,90 +214,55 @@ div#form_wrap form label:first-of-type:before {
 
 div#form_wrap form label:nth-of-type(2):before {
 	background-position: -42px 0px;
-	right: 58px;
 }
 
 div#form_wrap form label:last-of-type:before {
 	background-position: 4px 0px;
-	right: 88px;
 	width: 50px;
 	height: 50px;
 }
 
 div#form_wrap form label span {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 10px;
-	padding-right: 10px;
+	display: block;
+	padding-bottom: 5px;
+	text-align: right;
+
 }
 
 div#form_wrap form label input {
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-right: 40px;
 	border: 1px solid @color_ac_text;
 	transition: all 0.3s;
-	width:  calc(~'(230px - 40px)');
+	width:  calc(~'(100% - 40px)');
 }
 
 div#form_wrap form label:last-of-type input {
 	padding-right: 50px;
-	width:  calc(~'(230px - 50px)');
-}
-
-div#form_wrap form label input:focus,
-div#form_wrap form label input:hover {
-	border: 1px solid @color_ac_dark_blue;
+	width:  calc(~'(100% - 50px)');
 }
 
 div#form_wrap form div.controls {
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0px;
-	padding-right: 10px;
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 95%; 
 }
 
 div#form_wrap form div.controls button {
-	padding-top: 13px;
-	padding-bottom: 13px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-top: 17px;
+	padding-bottom: 17px;
 	border: none;
 	color: @color_ac_text;
 	background-color: @color_ac_light_blue;
 	cursor: pointer;
 	transition: all 0.3s;
+	width: 100%;
 }
 
 div#form_wrap form div.controls button:hover {
 	background-color: @color_ac_dark_blue;
-}
-
-/*Tablet version*/
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
-section#gallery h2:before, 
-section#features h2:before {
-	width: 900px;
-	margin-left: -450px;
-}
-
-section#engine div.replacement, 
-section#engine div.diagnostic2,
-section#engine div.gear {
- 	right: 0px;
-}
-
-section#engine div.diagnostic1, 
-section#engine div.updates {
-	left: 0px;
-}
-
-div#form_wrap form label input {
-	width:  calc(~'(200px - 40px)');
-}
-
 }

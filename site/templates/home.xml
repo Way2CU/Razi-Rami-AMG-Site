@@ -114,7 +114,19 @@
 							/>
 					</svg>
 				</a>
+				<cms:desktop>
+					<div id="form_wrap">
+						<p><cms:text constant="title_form"/></p>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+					</div>
+				</cms:desktop>
+			</section>
 
+			<cms:mobile>
 				<div id="form_wrap">
 					<p><cms:text constant="title_form"/></p>
 					<cms:module
@@ -123,11 +135,13 @@
 						text_id="contact"
 						/>
 				</div>
-			</section>
+			</cms:mobile>
+
+
 
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
-
+			
 		</body>
 	</html>
 </document>

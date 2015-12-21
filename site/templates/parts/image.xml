@@ -11,7 +11,7 @@
 
 	<cms:mobile>
 		<img 
-			src="gallery::getThumbnailById($params['id'], null, 120,Thumbnail::CONSTRAIN_BOTH)"
+			src="gallery::getThumbnailById($params['id'], null, 150,Thumbnail::CONSTRAIN_WIDTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
