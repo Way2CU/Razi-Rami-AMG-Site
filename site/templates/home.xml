@@ -137,8 +137,6 @@
 				</div>
 			</cms:mobile>
 
-
-
 			<!-- Footer -->
 			<cms:template file="parts/footer.xml"/>
 			
