@@ -21,7 +21,7 @@ section#gallery {
 	background-color: @color_ac_black;
 	text-align: center;
 	position: relative;
-	z-index: -1;
+	z-index: 0;
 }
 
 section#paint {
@@ -31,6 +31,8 @@ section#paint {
 	background-position: center bottom;
 	background-size: 100% auto;
 	min-height: 400px;
+	position: relative;
+	z-index: 1;
 }
 
 section#engine {
@@ -116,7 +118,7 @@ section#gallery h2:before {
 	background-color: @color_ac_text;
 }
 
-section#gallery img{
+section#gallery a{
 	display: inline-block;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -124,6 +126,10 @@ section#gallery img{
 	transition: all 0.3s;
 	overflow: hidden;
 	position: relative;
+}
+
+section#gallery a img {
+
 }
 
 section#features ul {
